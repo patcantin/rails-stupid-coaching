@@ -1,5 +1,12 @@
 <div class="container">
   <h1>Questions#answer</h1>
-  <p><%= @question %></p>
-  <p><%= @answer %></p>
+  <div class="me">
+    <h3>Me</h3>
+    <p><%= @question %></p>
+  </div>
+  <div class="boss">
+    <h3>Boss</h3>
+    <p><%= @answer %></p>
+  </div>
+    <li><%= link_to "Ask new question", ask_path %></li>
 </div>

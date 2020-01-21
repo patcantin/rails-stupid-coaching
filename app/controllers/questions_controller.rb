@@ -1,12 +1,5 @@
 class QuestionsController < ApplicationController
 
-    # Fake DB records
-  ANSWERS = {
-    1 => { answer: "I don't care, get dressed and go to work!" },
-    2 => { answer: "Silly question, get dressed and go to work!" },
-    3 => { answer: "Great!" }
-  }
-
   def ask
   end
 
@@ -15,8 +8,10 @@ class QuestionsController < ApplicationController
       @question = params[:question]
       @answer = "Great"
     elsif params[:question].include? "?"
+      @question = params[:question]
       @answer = "Silly question, get dressed and go to work!"
     else
+      @question = params[:question]
       @answer = "I don't care, get dressed and go to work!"
     end
   end
